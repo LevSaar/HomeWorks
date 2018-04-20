@@ -11,6 +11,6 @@
         {
         }
 
-        public DbSet<Gruppa> Gruppaes { get; set; }
+        public DbSet<Gruppa> Groups { get; set; }
     }
 }
