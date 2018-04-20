@@ -12,7 +12,7 @@ namespace HomeWork3
         {
             using(var context = new GruppaCreatorContext())
             {
-                context.Gruppaes.Add(new Gruppa { Name = "MyGroup" });
+                context.Groups.Add(new Gruppa { Name = "MyGroup" });
                 context.SaveChanges();
             }
         }
