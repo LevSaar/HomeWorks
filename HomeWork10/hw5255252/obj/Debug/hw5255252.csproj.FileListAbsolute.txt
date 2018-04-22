@@ -1,0 +1,12 @@
+c:\users\chundjinec\documents\visual studio 2017\Projects\hw5255252\hw5255252\bin\Debug\hw5255252.exe.config
+c:\users\chundjinec\documents\visual studio 2017\Projects\hw5255252\hw5255252\bin\Debug\hw5255252.exe
+c:\users\chundjinec\documents\visual studio 2017\Projects\hw5255252\hw5255252\bin\Debug\hw5255252.pdb
+c:\users\chundjinec\documents\visual studio 2017\Projects\hw5255252\hw5255252\bin\Debug\EntityFramework.dll
+c:\users\chundjinec\documents\visual studio 2017\Projects\hw5255252\hw5255252\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\chundjinec\documents\visual studio 2017\Projects\hw5255252\hw5255252\bin\Debug\EntityFramework.xml
+c:\users\chundjinec\documents\visual studio 2017\Projects\hw5255252\hw5255252\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\chundjinec\documents\visual studio 2017\Projects\hw5255252\hw5255252\bin\Debug\ru\EntityFramework.resources.dll
+c:\users\chundjinec\documents\visual studio 2017\Projects\hw5255252\hw5255252\obj\Debug\hw5255252.csprojResolveAssemblyReference.cache
+c:\users\chundjinec\documents\visual studio 2017\Projects\hw5255252\hw5255252\obj\Debug\hw5255252.csproj.CoreCompileInputs.cache
+c:\users\chundjinec\documents\visual studio 2017\Projects\hw5255252\hw5255252\obj\Debug\hw5255252.exe
+c:\users\chundjinec\documents\visual studio 2017\Projects\hw5255252\hw5255252\obj\Debug\hw5255252.pdb
