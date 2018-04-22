@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SellsStoreContainer" CdmEntityContainer="SellsContainer">
+    <EntitySetMapping Name="BuyersSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Sells.Buyers)">
+        <MappingFragment StoreEntitySet="BuyersSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SellersSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Sells.Sellers)">
+        <MappingFragment StoreEntitySet="SellersSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sells">
+      <EntityTypeMapping TypeName="IsTypeOf(Sells.Sell)">
+        <MappingFragment StoreEntitySet="Sells">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Sum" ColumnName="Sum" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="BuyersId" ColumnName="BuyersId" />
+          <ScalarProperty Name="SellersId" ColumnName="SellersId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

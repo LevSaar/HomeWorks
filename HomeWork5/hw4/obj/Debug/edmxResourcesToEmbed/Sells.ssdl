@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Sells.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BuyersSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SellersSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sells">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sum" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="BuyersId" Type="int" Nullable="false" />
+    <Property Name="SellersId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_BuyersSell">
+    <End Role="BuyersSet" Type="Self.BuyersSet" Multiplicity="1" />
+    <End Role="Sells" Type="Self.Sells" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BuyersSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sells">
+        <PropertyRef Name="BuyersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SellersSell">
+    <End Role="SellersSet" Type="Self.SellersSet" Multiplicity="1" />
+    <End Role="Sells" Type="Self.Sells" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SellersSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Sells">
+        <PropertyRef Name="SellersId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SellsStoreContainer">
+    <EntitySet Name="BuyersSet" EntityType="Self.BuyersSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SellersSet" EntityType="Self.SellersSet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sells" EntityType="Self.Sells" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_BuyersSell" Association="Self.FK_BuyersSell">
+      <End Role="BuyersSet" EntitySet="BuyersSet" />
+      <End Role="Sells" EntitySet="Sells" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SellersSell" Association="Self.FK_SellersSell">
+      <End Role="SellersSet" EntitySet="SellersSet" />
+      <End Role="Sells" EntitySet="Sells" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

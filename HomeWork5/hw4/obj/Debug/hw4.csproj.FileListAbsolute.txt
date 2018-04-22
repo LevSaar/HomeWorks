@@ -1,0 +1,31 @@
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw4\hw4\bin\Debug\hw4.exe.config
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw4\hw4\bin\Debug\hw4.exe
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw4\hw4\bin\Debug\hw4.pdb
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw4\hw4\bin\Debug\EntityFramework.dll
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw4\hw4\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw4\hw4\bin\Debug\EntityFramework.xml
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw4\hw4\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw4\hw4\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw4\hw4\obj\Debug\hw4.csprojResolveAssemblyReference.cache
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw4\hw4\obj\Debug\hw4.Form1.resources
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw4\hw4\obj\Debug\hw4.Properties.Resources.resources
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw4\hw4\obj\Debug\hw4.csproj.GenerateResource.Cache
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw4\hw4\obj\Debug\hw4.csproj.CoreCompileInputs.cache
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw4\hw4\obj\Debug\hw4.exe
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw4\hw4\obj\Debug\hw4.pdb
+C:\Users\User\Downloads\Desktop\D_z_4_1522750762\hw4\bin\Debug\hw4.exe.config
+C:\Users\User\Downloads\Desktop\D_z_4_1522750762\hw4\bin\Debug\hw4.exe
+C:\Users\User\Downloads\Desktop\D_z_4_1522750762\hw4\bin\Debug\hw4.pdb
+C:\Users\User\Downloads\Desktop\D_z_4_1522750762\hw4\bin\Debug\EntityFramework.dll
+C:\Users\User\Downloads\Desktop\D_z_4_1522750762\hw4\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Downloads\Desktop\D_z_4_1522750762\hw4\bin\Debug\EntityFramework.xml
+C:\Users\User\Downloads\Desktop\D_z_4_1522750762\hw4\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Downloads\Desktop\D_z_4_1522750762\hw4\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\User\Downloads\Desktop\D_z_4_1522750762\hw4\obj\Debug\hw4.csprojResolveAssemblyReference.cache
+C:\Users\User\Downloads\Desktop\D_z_4_1522750762\hw4\obj\Debug\hw4.Form1.resources
+C:\Users\User\Downloads\Desktop\D_z_4_1522750762\hw4\obj\Debug\hw4.Properties.Resources.resources
+C:\Users\User\Downloads\Desktop\D_z_4_1522750762\hw4\obj\Debug\hw4.csproj.GenerateResource.cache
+C:\Users\User\Downloads\Desktop\D_z_4_1522750762\hw4\obj\Debug\hw4.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\Desktop\D_z_4_1522750762\hw4\obj\Debug\hw4.csproj.CopyComplete
+C:\Users\User\Downloads\Desktop\D_z_4_1522750762\hw4\obj\Debug\hw4.exe
+C:\Users\User\Downloads\Desktop\D_z_4_1522750762\hw4\obj\Debug\hw4.pdb
