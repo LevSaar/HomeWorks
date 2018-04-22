@@ -1,0 +1,7 @@
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw5\hw5\bin\Debug\hw5.exe.config
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw5\hw5\bin\Debug\hw5.exe
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw5\hw5\bin\Debug\hw5.pdb
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw5\hw5\obj\Debug\hw5.csprojResolveAssemblyReference.cache
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw5\hw5\obj\Debug\hw5.csproj.CoreCompileInputs.cache
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw5\hw5\obj\Debug\hw5.exe
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw5\hw5\obj\Debug\hw5.pdb
