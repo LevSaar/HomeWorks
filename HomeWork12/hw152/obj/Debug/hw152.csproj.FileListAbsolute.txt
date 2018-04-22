@@ -1,0 +1,12 @@
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw152\hw152\bin\Debug\hw152.exe.config
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw152\hw152\bin\Debug\hw152.exe
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw152\hw152\bin\Debug\hw152.pdb
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw152\hw152\bin\Debug\EntityFramework.dll
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw152\hw152\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw152\hw152\bin\Debug\EntityFramework.xml
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw152\hw152\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw152\hw152\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw152\hw152\obj\Debug\hw152.csprojResolveAssemblyReference.cache
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw152\hw152\obj\Debug\hw152.csproj.CoreCompileInputs.cache
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw152\hw152\obj\Debug\hw152.exe
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\hw152\hw152\obj\Debug\hw152.pdb
