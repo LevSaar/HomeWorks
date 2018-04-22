@@ -1,0 +1,10 @@
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\Hw3\Hw3\bin\Debug\Hw3.exe.config
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\Hw3\Hw3\bin\Debug\Hw3.exe
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\Hw3\Hw3\bin\Debug\Hw3.pdb
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\Hw3\Hw3\obj\Debug\Hw3.csprojResolveAssemblyReference.cache
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\Hw3\Hw3\obj\Debug\Hw3.Form1.resources
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\Hw3\Hw3\obj\Debug\Hw3.Properties.Resources.resources
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\Hw3\Hw3\obj\Debug\Hw3.csproj.GenerateResource.Cache
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\Hw3\Hw3\obj\Debug\Hw3.csproj.CoreCompileInputs.cache
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\Hw3\Hw3\obj\Debug\Hw3.exe
+C:\Users\chundjinec\Documents\Visual Studio 2017\Projects\Hw3\Hw3\obj\Debug\Hw3.pdb
