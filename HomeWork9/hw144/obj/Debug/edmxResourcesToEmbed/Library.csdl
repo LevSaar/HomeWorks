@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Library" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="LibraryContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BookSet" EntityType="Library.Book" />
+    <EntitySet Name="AuthorSet" EntityType="Library.Author" />
+    <EntitySet Name="BookAuthorSet" EntityType="Library.BookAuthor" />
+    <EntitySet Name="UserSet" EntityType="Library.User" />
+    <EntitySet Name="BookRequestSet" EntityType="Library.BookRequest" />
+    <AssociationSet Name="BookBookAuthor" Association="Library.BookBookAuthor">
+      <End Role="Book" EntitySet="BookSet" />
+      <End Role="BookAuthor" EntitySet="BookAuthorSet" />
+    </AssociationSet>
+    <AssociationSet Name="BookBookRequest" Association="Library.BookBookRequest">
+      <End Role="Book" EntitySet="BookSet" />
+      <End Role="BookRequest" EntitySet="BookRequestSet" />
+    </AssociationSet>
+    <AssociationSet Name="AuthorBookAuthor" Association="Library.AuthorBookAuthor">
+      <End Role="Author" EntitySet="AuthorSet" />
+      <End Role="BookAuthor" EntitySet="BookAuthorSet" />
+    </AssociationSet>
+    <AssociationSet Name="UserBookRequest" Association="Library.UserBookRequest">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="BookRequest" EntitySet="BookRequestSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BookAuthor" Relationship="Library.BookBookAuthor" FromRole="Book" ToRole="BookAuthor" />
+    <NavigationProperty Name="BookRequest" Relationship="Library.BookBookRequest" FromRole="Book" ToRole="BookRequest" />
+  </EntityType>
+  <EntityType Name="Author">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BookAuthor" Relationship="Library.AuthorBookAuthor" FromRole="Author" ToRole="BookAuthor" />
+  </EntityType>
+  <EntityType Name="BookAuthor">
+    <Key>
+      <PropertyRef Name="BookId" />
+      <PropertyRef Name="AuthorId" />
+    </Key>
+    <Property Name="BookId" Type="Int32" Nullable="false" />
+    <Property Name="AuthorId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Book" Relationship="Library.BookBookAuthor" FromRole="BookAuthor" ToRole="Book" />
+    <NavigationProperty Name="Author" Relationship="Library.AuthorBookAuthor" FromRole="BookAuthor" ToRole="Author" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BookRequest" Relationship="Library.UserBookRequest" FromRole="User" ToRole="BookRequest" />
+  </EntityType>
+  <EntityType Name="BookRequest">
+    <Key>
+      <PropertyRef Name="BookId" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="BookId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Book" Relationship="Library.BookBookRequest" FromRole="BookRequest" ToRole="Book" />
+    <NavigationProperty Name="User" Relationship="Library.UserBookRequest" FromRole="BookRequest" ToRole="User" />
+  </EntityType>
+  <Association Name="BookBookAuthor">
+    <End Type="Library.Book" Role="Book" Multiplicity="1" />
+    <End Type="Library.BookAuthor" Role="BookAuthor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BookAuthor">
+        <PropertyRef Name="BookId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BookBookRequest">
+    <End Type="Library.Book" Role="Book" Multiplicity="1" />
+    <End Type="Library.BookRequest" Role="BookRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BookRequest">
+        <PropertyRef Name="BookId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuthorBookAuthor">
+    <End Type="Library.Author" Role="Author" Multiplicity="1" />
+    <End Type="Library.BookAuthor" Role="BookAuthor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Author">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BookAuthor">
+        <PropertyRef Name="AuthorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserBookRequest">
+    <End Type="Library.User" Role="User" Multiplicity="1" />
+    <End Type="Library.BookRequest" Role="BookRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BookRequest">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Library.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="LibraryStoreContainer">
+    <EntitySet Name="BookSet" EntityType="Library.Store.BookSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuthorSet" EntityType="Library.Store.AuthorSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BookAuthorSet" EntityType="Library.Store.BookAuthorSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserSet" EntityType="Library.Store.UserSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BookRequestSet" EntityType="Library.Store.BookRequestSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="BookBookAuthor" Association="Library.Store.BookBookAuthor">
+      <End Role="Book" EntitySet="BookSet" />
+      <End Role="BookAuthor" EntitySet="BookAuthorSet" />
+    </AssociationSet>
+    <AssociationSet Name="BookBookRequest" Association="Library.Store.BookBookRequest">
+      <End Role="Book" EntitySet="BookSet" />
+      <End Role="BookRequest" EntitySet="BookRequestSet" />
+    </AssociationSet>
+    <AssociationSet Name="AuthorBookAuthor" Association="Library.Store.AuthorBookAuthor">
+      <End Role="Author" EntitySet="AuthorSet" />
+      <End Role="BookAuthor" EntitySet="BookAuthorSet" />
+    </AssociationSet>
+    <AssociationSet Name="UserBookRequest" Association="Library.Store.UserBookRequest">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="BookRequest" EntitySet="BookRequestSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BookSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuthorSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BookAuthorSet">
+    <Key>
+      <PropertyRef Name="BookId" />
+      <PropertyRef Name="AuthorId" />
+    </Key>
+    <Property Name="BookId" Type="int" Nullable="false" />
+    <Property Name="AuthorId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BookRequestSet">
+    <Key>
+      <PropertyRef Name="BookId" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="BookId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="BookBookAuthor">
+    <End Role="Book" Type="Library.Store.BookSet" Multiplicity="1" />
+    <End Role="BookAuthor" Type="Library.Store.BookAuthorSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BookAuthor">
+        <PropertyRef Name="BookId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BookBookRequest">
+    <End Role="Book" Type="Library.Store.BookSet" Multiplicity="1" />
+    <End Role="BookRequest" Type="Library.Store.BookRequestSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BookRequest">
+        <PropertyRef Name="BookId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuthorBookAuthor">
+    <End Role="Author" Type="Library.Store.AuthorSet" Multiplicity="1" />
+    <End Role="BookAuthor" Type="Library.Store.BookAuthorSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Author">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BookAuthor">
+        <PropertyRef Name="AuthorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserBookRequest">
+    <End Role="User" Type="Library.Store.UserSet" Multiplicity="1" />
+    <End Role="BookRequest" Type="Library.Store.BookRequestSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BookRequest">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
