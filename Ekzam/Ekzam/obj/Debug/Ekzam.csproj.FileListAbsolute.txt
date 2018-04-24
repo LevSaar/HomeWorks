@@ -1,0 +1,11 @@
+c:\users\шмелёвл\source\repos\Ekzam\Ekzam\bin\Debug\Ekzam.exe.config
+c:\users\шмелёвл\source\repos\Ekzam\Ekzam\bin\Debug\Ekzam.exe
+c:\users\шмелёвл\source\repos\Ekzam\Ekzam\bin\Debug\Ekzam.pdb
+c:\users\шмелёвл\source\repos\Ekzam\Ekzam\bin\Debug\EntityFramework.dll
+c:\users\шмелёвл\source\repos\Ekzam\Ekzam\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\шмелёвл\source\repos\Ekzam\Ekzam\bin\Debug\EntityFramework.xml
+c:\users\шмелёвл\source\repos\Ekzam\Ekzam\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\шмелёвл\source\repos\Ekzam\Ekzam\obj\Debug\Ekzam.csprojResolveAssemblyReference.cache
+c:\users\шмелёвл\source\repos\Ekzam\Ekzam\obj\Debug\Ekzam.csproj.CoreCompileInputs.cache
+c:\users\шмелёвл\source\repos\Ekzam\Ekzam\obj\Debug\Ekzam.exe
+c:\users\шмелёвл\source\repos\Ekzam\Ekzam\obj\Debug\Ekzam.pdb
