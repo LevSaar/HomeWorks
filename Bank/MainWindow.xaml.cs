@@ -66,7 +66,6 @@ namespace Bank
                             }
                         }
                     }
-                    else MessageBox.Show("Incorrect username or password");
                 }
             }
             
