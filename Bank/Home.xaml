@@ -1,0 +1,27 @@
+﻿<Window x:Class="Bank.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bank"
+        mc:Ignorable="d"
+        Title="Home" Height="300" Width="300">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="54,32,0,0" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="58,89,0,0" TextWrapping="Wrap" Text="Cash:" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="28,141,0,0" TextWrapping="Wrap" Text="Credit number:" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+
+        <TextBlock Name ="nameTextBlock" HorizontalAlignment="Left" Margin="145,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Name ="cashTextBlock" HorizontalAlignment="Left" Margin="145,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Name ="creditNumberTextBlock" HorizontalAlignment="Left" Margin="145,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+
+        <Button Content="Replenish" HorizontalAlignment="Left" Margin="28,179,0,0" VerticalAlignment="Top" Width="100" Height="23" Click="ReplenishButton_Click" FontSize="14"/>
+        <Button Content="Withdraw" HorizontalAlignment="Left" Margin="28,218,0,0" VerticalAlignment="Top" Width="100" Height="23" FontSize="14" Click="WithdrawButton_Click"/>
+        
+        <TextBox Name="moneyTextBox" HorizontalAlignment="Left" Height="32" Margin="145,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" FontSize="16"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="ID:" VerticalAlignment="Top"/>
+        <TextBlock Name="idTextBlock" HorizontalAlignment="Left" Margin="29,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BankDataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="BankDataModelStoreContainer">
+    <EntitySet Name="UserSet" EntityType="BankDataModel.Store.UserSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BankAccountSet" EntityType="BankDataModel.Store.BankAccountSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UserBankAccount" Association="BankDataModel.Store.UserBankAccount">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="BankAccount" EntitySet="BankAccountSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="UserSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BankAccountSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreditNumber" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Money" Type="float" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="UserBankAccount">
+    <End Role="User" Type="BankDataModel.Store.UserSet" Multiplicity="1" />
+    <End Role="BankAccount" Type="BankDataModel.Store.BankAccountSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BankAccount">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
