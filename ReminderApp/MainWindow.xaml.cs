@@ -34,18 +34,28 @@ namespace ReminderApp
             {
                 DateTime selectedDate = dateRemindPicker.SelectedDate.Value.Date;
 
-                if (selectedDate < DateTime.Now)
-                    MessageBox.Show("Выберите дату корректно !");
+                if (selectedDate < DateTime.Now || hourBox.Text == null || minuteBox.Text == null || Int32.Parse(hourBox.Text) > 23 || Int32.Parse(minuteBox.Text) > 59)
+                    MessageBox.Show("Введите данные корректно !");
                 else
-                    AddReminder(selectedDate, new TextRange(messageTextBox.Document.ContentStart, messageTextBox.Document.ContentEnd).Text);
+                    AddReminder(selectedDate, Int32.Parse(hourBox.Text), Int32.Parse(minuteBox.Text), new TextRange(messageTextBox.Document.ContentStart, messageTextBox.Document.ContentEnd).Text);
             }
-            catch { MessageBox.Show("Выберите дату корректно !"); }
+            catch { MessageBox.Show("Введите данные корректно !"); }
         }
 
-        private void AddReminder(DateTime _dateRemind, string _message)
+        private void AddReminder(DateTime _dateRemind, int _hour, int _minute, string _message)
         {
             TimeSpan time = _dateRemind - DateTime.Now;
-            Timer timer = new Timer(new TimerCallback(state => MessageBox.Show(DateTime.Now.ToLongTimeString())), null, 0, (int)time.TotalMilliseconds); //  Доделать
+            Timer timer = new Timer(
+                new TimerCallback
+                    (
+                        state => MessageBox.Show("Напоминание \n" + DateTime.Now.ToLongTimeString() + ": " + _message)
+                    ), 
+                    null, 
+                    0, 
+                    (
+                        (int)time.TotalMilliseconds + ((_hour * 3600000) + (_minute * 60000))
+                    )
+                );
         }
     }
 }

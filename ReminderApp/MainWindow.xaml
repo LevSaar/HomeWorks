@@ -5,25 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ReminderApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="261.765" Width="285.784">
-    <Grid>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF9FDCFF" Offset="0"/>
-                <GradientStop Color="White" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-        <RichTextBox Name="messageTextBox" HorizontalAlignment="Left" Height="90" Margin="17,95,0,0" VerticalAlignment="Top" Width="241" FontSize="16" BorderThickness="1" BorderBrush="Black">
+        Title="MainWindow" Height="308.723" Width="339.736">
+    <Grid Background="Gainsboro">
+        <RichTextBox Name="messageTextBox" HorizontalAlignment="Left" Height="120" Margin="17,103,0,0" VerticalAlignment="Top" Width="297" FontSize="16" BorderThickness="1" BorderBrush="Black">
             <FlowDocument>
                 <Paragraph>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <TextBlock HorizontalAlignment="Left" Margin="26,60,0,0" TextWrapping="Wrap" Text="Message:" VerticalAlignment="Top" FontSize="16"/>
-        <TextBlock HorizontalAlignment="Left" Margin="15,24,0,0" TextWrapping="Wrap" Text="Remind me in:" VerticalAlignment="Top" FontSize="16"/>
-        <DatePicker Name="dateRemindPicker" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="121,24,0,0" BorderBrush="#00000000" Width="137"/>
+        <TextBlock HorizontalAlignment="Left" Margin="26,77,0,0" TextWrapping="Wrap" Text="Message:" VerticalAlignment="Top" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="26,24,0,0" TextWrapping="Wrap" Text="Remind me in:" VerticalAlignment="Top" FontSize="16"/>
+        <DatePicker Name="dateRemindPicker" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="164,24,0,0" BorderBrush="#00000000" Width="137"/>
 
-        <Button Content="Add remind" HorizontalAlignment="Left" Margin="164,190,0,0" VerticalAlignment="Top" Width="94" BorderBrush="Black" Background="White" FontSize="14" BorderThickness="2" Click="MessageBox_ButtonClick" Height="31"/>
+        <Button Content="Add remind" HorizontalAlignment="Left" Margin="209,228,0,0" VerticalAlignment="Top" Width="105" BorderBrush="Black" Background="White" FontSize="14" BorderThickness="2" Click="MessageBox_ButtonClick" Height="40"/>
+
+        <TextBox Name="hourBox" HorizontalAlignment="Left" Height="26" Margin="183,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28" FontSize="16" BorderBrush="White"/>
+        <TextBox Name="minuteBox" HorizontalAlignment="Left" Height="26" Margin="224,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28" FontSize="16" BorderBrush="White"/>
+        
+        <TextBlock HorizontalAlignment="Left" Margin="213,36,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="190,79,0,0" TextWrapping="Wrap" Text="hh   /   mm" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
