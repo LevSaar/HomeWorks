@@ -32,29 +32,34 @@ namespace ReminderApp
         {
             try
             {
+                DateTime nowTime = DateTime.Now;
                 DateTime selectedDate = dateRemindPicker.SelectedDate.Value.Date;
+                
 
-                if (selectedDate < DateTime.Now || hourBox.Text == null || minuteBox.Text == null || Int32.Parse(hourBox.Text) > 23 || Int32.Parse(minuteBox.Text) > 59)
+                if (selectedDate < nowTime || hourBox.Text == null|| minuteBox.Text == null || Int32.Parse(hourBox.Text) > 23 || Int32.Parse(minuteBox.Text) > 59)
                     MessageBox.Show("Введите данные корректно !");
                 else
                     AddReminder(selectedDate, Int32.Parse(hourBox.Text), Int32.Parse(minuteBox.Text), new TextRange(messageTextBox.Document.ContentStart, messageTextBox.Document.ContentEnd).Text);
             }
-            catch { MessageBox.Show("Введите данные корректно !"); }
+            catch {
+                MessageBox.Show("Введите данные корректно !");
+            }
         }
 
         private void AddReminder(DateTime _dateRemind, int _hour, int _minute, string _message)
         {
             TimeSpan time = _dateRemind - DateTime.Now;
+
             Timer timer = new Timer(
                 new TimerCallback
                     (
-                        state => MessageBox.Show("Напоминание \n" + DateTime.Now.ToLongTimeString() + ": " + _message)
+                        state => MessageBox.Show("Напоминание \n" + DateTime.Now.ToLongTimeString() + ": \n")
                     ), 
-                    null, 
-                    0, 
+                    _message,  
                     (
                         (int)time.TotalMilliseconds + ((_hour * 3600000) + (_minute * 60000))
-                    )
+                    ),
+                    0
                 );
         }
     }
