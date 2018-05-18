@@ -1,0 +1,15 @@
+c:\users\шмелёвл\source\repos\TasksHomeWork\TasksHomeWork\obj\Debug\TasksHomeWork.csprojResolveAssemblyReference.cache
+c:\users\шмелёвл\source\repos\TasksHomeWork\TasksHomeWork\obj\Debug\MainWindow.g.cs
+c:\users\шмелёвл\source\repos\TasksHomeWork\TasksHomeWork\obj\Debug\App.g.cs
+c:\users\шмелёвл\source\repos\TasksHomeWork\TasksHomeWork\obj\Debug\TasksHomeWork_MarkupCompile.cache
+c:\users\шмелёвл\source\repos\TasksHomeWork\TasksHomeWork\obj\Debug\TasksHomeWork_MarkupCompile.lref
+c:\users\шмелёвл\source\repos\TasksHomeWork\TasksHomeWork\bin\Debug\TasksHomeWork.exe.config
+c:\users\шмелёвл\source\repos\TasksHomeWork\TasksHomeWork\bin\Debug\TasksHomeWork.exe
+c:\users\шмелёвл\source\repos\TasksHomeWork\TasksHomeWork\bin\Debug\TasksHomeWork.pdb
+c:\users\шмелёвл\source\repos\TasksHomeWork\TasksHomeWork\obj\Debug\MainWindow.baml
+c:\users\шмелёвл\source\repos\TasksHomeWork\TasksHomeWork\obj\Debug\TasksHomeWork.g.resources
+c:\users\шмелёвл\source\repos\TasksHomeWork\TasksHomeWork\obj\Debug\TasksHomeWork.Properties.Resources.resources
+c:\users\шмелёвл\source\repos\TasksHomeWork\TasksHomeWork\obj\Debug\TasksHomeWork.csproj.GenerateResource.Cache
+c:\users\шмелёвл\source\repos\TasksHomeWork\TasksHomeWork\obj\Debug\TasksHomeWork.csproj.CoreCompileInputs.cache
+c:\users\шмелёвл\source\repos\TasksHomeWork\TasksHomeWork\obj\Debug\TasksHomeWork.exe
+c:\users\шмелёвл\source\repos\TasksHomeWork\TasksHomeWork\obj\Debug\TasksHomeWork.pdb
