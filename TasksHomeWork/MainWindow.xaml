@@ -5,11 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TasksHomeWork"
         mc:Ignorable="d"
-        Title="MainWindow" Height="152.941" Width="471.078">
+        Title="MainWindow" Height="895.941" Width="1598.078">
     <Grid>
-        <ListBox Name="listBox" HorizontalAlignment="Left" Height="102" Margin="142,10,0,0" VerticalAlignment="Top" Width="311"/>
-        
-        <Button Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="23,23,0,0" VerticalAlignment="Top" Width="95" Height="30" Click="StartButton_Click"/>
-        <Button Name="endButton" Content="End" HorizontalAlignment="Left" Margin="23,67,0,0" VerticalAlignment="Top" Width="95" Height="30" Click="EndButton_Click"/>
+
+        <Button Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="767,293,0,0" VerticalAlignment="Top" Width="58" Height="26" Click="StartButton_Click"/>
+        <Button Name="endButton" Content="End" HorizontalAlignment="Left" Margin="767,545,0,0" VerticalAlignment="Top" Width="58" Height="20" Click="EndButton_Click"/>
     </Grid>
 </Window>

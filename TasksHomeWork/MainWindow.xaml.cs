@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace TasksHomeWork
 {
@@ -20,28 +23,48 @@ namespace TasksHomeWork
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Task[] TaskList;
+        static CancellationTokenSource token = new CancellationTokenSource();
+        public Task _task;
 
         public MainWindow()
         {
             InitializeComponent();
-
-            TaskList = new Task[3]
-            {
-                new Task(() => listBox.Items.Add("First Task")),
-                new Task(() => listBox.Items.Add("Second Task")),
-                new Task(() => listBox.Items.Add("Third Task"))
-            };
         }
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            
-        }
+            _task = Task.Run(() => Prockill(token.Token));
+        }   
 
         private void EndButton_Click(object sender, RoutedEventArgs e)
         {
+            token.Cancel();
+        }
 
+        public static async Task Prockill(CancellationToken cancellationToken)
+        {
+            try
+            {
+                Process[] procList = Process.GetProcesses();
+
+                while (!cancellationToken.IsCancellationRequested)
+                {
+                    await Task.Delay(500, cancellationToken);
+
+                    for (int i = 0; i < procList.Length; i++)
+                    {
+                        Process[] processesByName = Process.GetProcessesByName(procList[i].MachineName.ToString());
+                        foreach (Process process in processesByName)
+                        {
+                            process.Kill();
+                        }
+                   }
+                }
+            }
+            catch (OperationCanceledException ex)
+            {
+                MessageBox.Show("Ошибка: "+ ex.ToString());
+            }
         }
     }
 }
