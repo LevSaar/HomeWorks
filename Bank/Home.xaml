@@ -22,6 +22,7 @@
         
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="ID:" VerticalAlignment="Top"/>
         <TextBlock Name="idTextBlock" HorizontalAlignment="Left" Margin="29,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+        <Button Content="Exchange rate" HorizontalAlignment="Left" Margin="207,9,0,0" VerticalAlignment="Top" Width="75" FontSize="10" Click="ExchangeRateButton_Click"/>
 
     </Grid>
 </Window>

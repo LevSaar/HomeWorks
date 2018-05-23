@@ -1,0 +1,18 @@
+﻿<Window x:Class="Bank.ExchangeRateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bank"
+        mc:Ignorable="d"
+        Title="ExchangeRateWindow" Height="247.446" Width="238.739">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="60,48,0,0" TextWrapping="Wrap" Text="USD" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="60,85,0,0" TextWrapping="Wrap" Text="RUB" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="63,122,0,0" TextWrapping="Wrap" Text="EUR" VerticalAlignment="Top" FontSize="24"/>
+
+        <TextBlock Name="usdTextBlock" HorizontalAlignment="Left" Margin="134,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Foreground="#FF0BEA00"/>
+        <TextBlock Name="eurTextBlock" HorizontalAlignment="Left" Margin="134,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Foreground="#FF0BEA00"/>
+        <TextBlock Name="kztTextBlock" HorizontalAlignment="Left" Margin="134,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Foreground="#FF0BEA00"/>
+    </Grid>
+</Window>

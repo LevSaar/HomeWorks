@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -109,6 +110,17 @@ namespace Bank
                 connection.BankAccounts.Find(_bankAccount.Id).Money -= _money;
                 connection.SaveChanges();
             }
+        }
+
+        private void ExchangeRateButton_Click(object sender, RoutedEventArgs e)
+        {
+            Thread thread = new Thread(new ThreadStart(ExchangeRateShow));
+        }
+
+        private void ExchangeRateShow()
+        {
+            ExchangeRateWindow er = new ExchangeRateWindow();
+            er.Show();
         }
     }
 }
