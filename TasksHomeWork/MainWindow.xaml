@@ -1,0 +1,14 @@
+﻿<Window x:Class="TasksHomeWork.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TasksHomeWork"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="895.941" Width="1598.078">
+    <Grid>
+
+        <Button Name="startButton" Content="Start" HorizontalAlignment="Left" Margin="767,293,0,0" VerticalAlignment="Top" Width="58" Height="26" Click="StartButton_Click"/>
+        <Button Name="endButton" Content="End" HorizontalAlignment="Left" Margin="767,545,0,0" VerticalAlignment="Top" Width="58" Height="20" Click="EndButton_Click"/>
+    </Grid>
+</Window>
